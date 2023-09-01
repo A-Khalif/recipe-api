@@ -19,8 +19,8 @@ public class RecipeService
     @Autowired
     private RecipeRepo recipeRepo;
 
-    private final String argumentNotNull = "Argument can not be null";
-    private final String argumentNotLessThanZero = "Argument can not be less than zero";
+    public static final String ARGUMENT_CAN_NOT_BE_NULL = "Argument can not be null";
+    public static final String ARGUMENT_NOT_LESS_THAN_ZERO = "Argument can not be less than zero";
 
     /**
      * @return retrieves list of recipes
@@ -45,7 +45,7 @@ public class RecipeService
         }
         else
         {
-        throw new IllegalArgumentException(argumentNotNull) ;
+        throw new IllegalArgumentException(ARGUMENT_CAN_NOT_BE_NULL) ;
         }
     }
 
@@ -64,7 +64,7 @@ public class RecipeService
         }
         else
         {
-            throw new IllegalArgumentException(argumentNotNull);
+            throw new IllegalArgumentException(ARGUMENT_CAN_NOT_BE_NULL);
         }
     }
     
@@ -82,7 +82,7 @@ public class RecipeService
         }
         else
         {
-            throw new IllegalArgumentException(argumentNotNull);
+            throw new IllegalArgumentException(ARGUMENT_CAN_NOT_BE_NULL);
         }
     }
 
@@ -101,7 +101,7 @@ public class RecipeService
         }
         else
         {
-            throw new IllegalArgumentException(argumentNotNull);
+            throw new IllegalArgumentException(ARGUMENT_CAN_NOT_BE_NULL);
         }
     }
 
@@ -118,7 +118,7 @@ public class RecipeService
         }
         else
         {
-            throw new IllegalArgumentException(argumentNotLessThanZero);
+            throw new IllegalArgumentException(ARGUMENT_NOT_LESS_THAN_ZERO);
         }
     }
 
@@ -135,7 +135,7 @@ public class RecipeService
        }
        else
        {
-           throw new IllegalArgumentException(argumentNotNull);
+           throw new IllegalArgumentException(ARGUMENT_CAN_NOT_BE_NULL);
        }
     }
 
@@ -209,7 +209,7 @@ public class RecipeService
         }
         else
         {
-            throw new IllegalArgumentException(argumentNotLessThanZero);
+            throw new IllegalArgumentException(ARGUMENT_NOT_LESS_THAN_ZERO);
         }
     }
 
