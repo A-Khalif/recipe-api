@@ -19,8 +19,8 @@ public class RecipeService
     @Autowired
     private RecipeRepo recipeRepo;
 
-    private String argumentNotNull = "Argument can not be null";
-    private String argumentNotLessThanZero = "Argument can not be less than zero";
+    private final String argumentNotNull = "Argument can not be null";
+    private final String argumentNotLessThanZero = "Argument can not be less than zero";
 
     /**
      * @return retrieves list of recipes
@@ -198,7 +198,7 @@ public class RecipeService
      * Retrieves all the recipes less than or equal to the given cooking time in minutes
      * @param maxCookingTime - Refers to the max cooking time in minutes
      * @return - Retrieving a list of recipes that have the cooking time provided or less
-     * {@link RecipeController#getRecipesByCookingTimeLessThanOrEqual(long)}
+     * {@link RecipeController#getAllRecipes(long)}
      */
     public List<Recipe> getRecipesByCookingTimeLessThanOrEqual(long maxCookingTime)
     {

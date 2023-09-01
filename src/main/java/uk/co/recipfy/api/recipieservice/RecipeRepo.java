@@ -15,22 +15,20 @@ import java.util.List;
 public interface RecipeRepo extends JpaRepository<Recipe, Long>
 {
 
-    public Recipe findById(long id);
+     Recipe findById(long id);
 
-    public boolean deleteRecipeById(long id);
+     boolean deleteRecipeById(long id);
 
-    public List<Recipe> findByName(String name);
+     List<Recipe> findByName(String name);
 
 
-    public List<Recipe> findByDescriptionContaining(String description);
+     List<Recipe> findByDescriptionContaining(String description);
 
-    public List<Recipe> findByCategory(String category);
+     List<Recipe> findByCategory(String category);
 
-    public List<Recipe> findByCookingTimeLessThanEqual(long cookingTime);
+     List<Recipe> findByCookingTimeLessThanEqual(long cookingTime);
 
-    public List<Recipe> findByCookingTimeGreaterThan(long cookingTime);
-
-    public void deleteByCategory(String category);
-    public Recipe findByNameAndCategory(String name, String category);
+     void deleteByCategory(String category);
+     Recipe findByNameAndCategory(String name, String category);
 
 }

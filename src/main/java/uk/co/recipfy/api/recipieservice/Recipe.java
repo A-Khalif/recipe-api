@@ -14,7 +14,7 @@ public class Recipe
 {
     @Id
     @GeneratedValue(generator ="recipe_id",strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name= "recipe_id", sequenceName = "recipe_id", initialValue = 1)
+    @SequenceGenerator(name= "recipe_id", sequenceName = "recipe_id")
     @Column(name = "rec_id")
     private   Long id;
     @Column(name = "rec_name")
